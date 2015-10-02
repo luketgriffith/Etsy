@@ -75,10 +75,105 @@ var materials = items.filter(function(a){
 var answer4 = document.querySelector('#answer4'); //Figure out how to make line breaks come over with answers
 C.forEach(function(a){
   var textNode6 = document.createTextNode(a);
+  var linebreak =document.createElement('br');
   answer4.appendChild(textNode6);
+  answer4.appendChild(linebreak);
 });
 
 //************************************Number5******************************************//
+/*Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
+Qty of 2 Groomsmen Gift - Stainless Steel Personalized Bottle Opener - NO Capcatcher has 9 materials:
+wall mount bottle opener
+wedding
+man cave
+christmas gift
+guy gift
+fathers day
+home bar
+beer
+bar
+
+The Three Broomsticks Customizable Beer Stein Mug, Harry Potter  Inspired, hogsmeade village, harry potter gift, three broomsticks mug  has 13 materials:
+
+glass
+sandblast cabinet
+vinyl
+beer glass
+pint glass
+etched pint glass
+etched glass
+etched beer glass
+16 oz pint
+beer gift
+etched harry potter glass
+the three broomsticks glass
+personalized harry potter glass*/
+var D=[]
+var E=[]
+var materials = items.forEach(function(a){
+  var numMat = a.materials;
+  var numMatLength= numMat.length;
+  if (numMatLength>7){
+  D.push(a);
+  console.log(D) //can add numMat[0], numMat[1], etc to get them on new lines if you need.
+ }
+});
+
+var answer5= D.forEach(function(a){
+  var ans5= document.querySelector('#answer5');
+  var textNode7 = document.createTextNode(a.title);
+  var linebreak =document.createElement('br');
+  ans5.appendChild(textNode7);
+  ans5.appendChild(linebreak);
+  // var materials = D.materials;
+  a.materials.forEach(function(b){
+    var ans5B = document.querySelector('#answer5');
+    var textNode10 = document.createTextNode(b);
+    var linebreak = document.createElement('br');
+    ans5B.appendChild(textNode10);
+    ans5B.appendChild(linebreak);
+  })
+  })
+
+
+
+
+
+// var answer5 = document.querySelector('#answer5'); //Figure out how to make line breaks come over with answers
+// D.forEach(function(a){
+//   // var linebreak =document.createElement('br');
+//   // var E = a.toString();
+//   // var F= E.split(',').join(linebreak);
+//   // G.push(F);
+//   var textNode7 = document.createTextNode(a);
+//   answer5.appendChild(textNode7);
+//   answer5.appendChild(linebreak);
+// });
+
+//****************************************Number 6***************************************//
+/*How many items were made by their sellers?
+
+18 were made by their sellers*/
+var H=[]
+var madeBy = items.filter(function(a){
+  if (a.who_made === 'i_did'){
+    H.push('1');
+      }
+});
+
+var hNum = H.length;
+var final = hNum+" were made by their sellers."
+var answer6= document.querySelector('#answer6');
+var textNode8 = document.createTextNode(final);
+answer6.appendChild(textNode8);
+
+
+
+
+
+
+
+
 
 
 
