@@ -1,23 +1,29 @@
+.wrapper {
+  background-color: #EEEEEE; }
+
 .header {
   height: 50px;
   width: 100%;
   background-color: #FFFFFF; }
   .header p {
-    color: #757479;
+    color: #3D3C42;
     float: left;
-    margin: 10px 50px 10px 50px;
-    font-size: 20px; }
+    margin: 10px 50px 14px 40px;
+    font-size: 22px; }
 
 .headpic {
-  background-color: #393937;
-  width: 100%;
-  height: 100px; }
+  background-image: url("../images/banner.jpg");
+  height: 200px;
+  background-size: cover; }
 
 .answer {
-  text-align: center; }
+  text-align: center;
+  margin: 40px 0; }
   .answer h1 {
     color: #484848;
-    font-size: 25px; }
+    width: 100%;
+    font-size: 25px;
+    text-align: center; }
 
 .footer {
   background-color: #4A494F;
@@ -27,3 +33,14 @@
   .footer p {
     color: white;
     font-size: 7px; }
+
+h1 {
+  display: table;
+  white-space: nowrap; }
+  h1:before, h1:after {
+    border-top: 2px solid #E3E3E3;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.5em;
+    width: 45%; }
